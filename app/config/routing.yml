@@ -1,4 +1,7 @@
+acme_default:
+    resource: "@AcmeDefaultBundle/Resources/config/routing.yml"
+    prefix:   /
+
 acme_team:
     resource: "@AcmeTeamBundle/Resources/config/routing.yml"
     prefix:   /
-

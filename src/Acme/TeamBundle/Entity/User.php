@@ -4,7 +4,6 @@
 namespace Acme\TeamBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="user")
@@ -12,6 +11,17 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class User
 {
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Team", inversedBy="users")
+     * @ORM\JoinTable(name="users_teams")
+     */
+    private $teams;
+
+    public function __construct() {
+        $this->teams = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * @ORM\Column(type="integer")
      * @ORM\Id
@@ -112,5 +122,38 @@ class User
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * Add teams
+     *
+     * @param \Acme\TeamBundle\Entity\Team $teams
+     * @return User
+     */
+    public function addTeam(\Acme\TeamBundle\Entity\Team $teams)
+    {
+        $this->teams[] = $teams;
+
+        return $this;
+    }
+
+    /**
+     * Remove teams
+     *
+     * @param \Acme\TeamBundle\Entity\Team $teams
+     */
+    public function removeTeam(\Acme\TeamBundle\Entity\Team $teams)
+    {
+        $this->teams->removeElement($teams);
+    }
+
+    /**
+     * Get teams
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTeams()
+    {
+        return $this->teams;
     }
 }

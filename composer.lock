@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "cabcccc63163c90f38cad9fa1e757ce6",
+    "hash": "2c0295f7b959d7cc894ee1a78d4f3b41",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -725,54 +725,6 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
-        },
-        {
-            "name": "jojari/simple-linkedin-php",
-            "version": "v3.2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sajari/simple-linkedin-php.git",
-                "reference": "78dbda6d41b64ac0600dea08cd22f50bc56ccac6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sajari/simple-linkedin-php/zipball/78dbda6d41b64ac0600dea08cd22f50bc56ccac6",
-                "reference": "78dbda6d41b64ac0600dea08cd22f50bc56ccac6",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "linkedin_3.2.0.1.class.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Ingram"
-                },
-                {
-                    "name": "Paul Mennega",
-                    "email": "paul@fiftymission.net"
-                }
-            ],
-            "description": "A simple, stand-alone wrapper for the most-used functionality of the LinkedIn API platform",
-            "keywords": [
-                "api",
-                "linkedin",
-                "linkedin-api",
-                "oauth",
-                "php-linkedin",
-                "platform",
-                "wrapper"
-            ],
-            "time": "2012-10-25 05:18:30"
         },
         {
             "name": "kriswallsmith/assetic",

@@ -35,17 +35,17 @@ class UserController extends Controller
     /**
      * @Route("/user/create", name="_create")
      */
-    public function createAction()
+    public function createAction($data)
     {
         $user = new User();
-        $user->setUserName('Biaort')
-            ->setEmail('test@gmail.com')
-            ->setPassword(md5('passsword'));
+        $user->setUserName($data['userName'])
+            ->setEmail($data['email'])
+            ->setPassword(md5($data['password']));
         $em = $this->getDoctrine()->getManager();
         $em->persist($user);
         $em->flush();
 
-        return new Response('Created product id '.$user->getId());
+        return new Response('Created user id '.$user->getId());
     }
 
     public function showAction($id)

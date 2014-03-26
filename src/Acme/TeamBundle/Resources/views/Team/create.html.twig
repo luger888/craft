@@ -1,0 +1,15 @@
+{# src/Acme/TeamBundle/Resources/views/Team/create.html.twig #}
+{% extends "AcmeTeamBundle::layout.html.twig" %}
+
+{% block title %}Craft your team here!{% endblock %}
+
+{% block body %}
+    <h1>Welcome to the Team:create page</h1>
+    {% if form is defined %}
+        {{ form(form) }}
+    {% endif %}
+    {% if message is defined %}
+        {{ message.body }}
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,3 @@
+acme_default_homepage:
+    pattern:  /
+    defaults: { _controller: AcmeDefaultBundle:Default:index }

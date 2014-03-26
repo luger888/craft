@@ -1,0 +1,18 @@
+{# src/Acme/TeamBundle/Resources/views/Default/base.html.twig #}
+{% extends 'AcmeTeamBundle::layout.html.twig' %}
+
+{% block title %}You have no team {% endblock %}
+
+{% block body %}
+    <div class="inner-content">
+        <div class="row">
+            <div class="span12">   You have no team yet!</div>
+        </div>
+        <div class="row">
+            <div class="span12">  How about <a href="{{ app.request.requesturi }}/create">crafting?</a></div>
+        </div>
+
+
+    </div>
+
+{% endblock %}

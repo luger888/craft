@@ -1,6 +1,14 @@
 acme_team_homepage:
     pattern:  /team
     defaults: { _controller: AcmeTeamBundle:Default:index }
+
+acme_team_team:
+    pattern:  /team/team
+    defaults: { _controller: AcmeTeamBundle:Team:index }
+
+acme_team_create:
+     pattern:  /team/team/create
+     defaults: { _controller: AcmeTeamBundle:Team:create }
 acme_team_user:
     pattern:  /team/users
     defaults: { _controller: AcmeTeamBundle:User:index }
