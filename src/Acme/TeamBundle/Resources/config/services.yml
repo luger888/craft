@@ -1,0 +1,3 @@
+services:
+   linkedin:
+      class:       Acme\TeamBundle\Services\LinkedInService

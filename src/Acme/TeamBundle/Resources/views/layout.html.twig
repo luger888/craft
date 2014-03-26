@@ -1,0 +1,50 @@
+{# src/Acme/TeamBundle/Resources/views/Default/base.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{% block title %}Craft your team{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/team/css/bootstrap-2.3.2.css') }}" media="screen" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/team/css/custom.css') }}" media="screen" />
+    {% endblock %}
+
+</head>
+<body>
+    <div class="layout-base">
+        <!-- HEADER BLOCK -->
+
+        <div id="header" class="layout-header">
+            {% block header %}
+                <h1 class="text-center"> Craft Your Team</h1>
+            {% endblock %}
+        </div>
+
+        <!--END -- HEADER BLOCK -->
+
+
+        <!-- CONTENT BLOCK -->
+
+        <div id="content" class="layout-content">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+
+        <!--END -- CONTENT BLOCK -->
+
+
+
+        <!-- FOOTER BLOCK -->
+
+        <div id="footer" class="layout-footer">
+            {% block footer %}
+
+            {% endblock %}
+        </div>
+
+        <!--END -- FOOTER BLOCK -->
+    </div>
+</body>
+</html>
